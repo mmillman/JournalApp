@@ -1,0 +1,6 @@
+<ul>
+  <% posts.each(function (post) { %>
+    <li><%= post.escape("title") %></li>
+  <% }); %>
+</ul>
+<a href="/#/posts/new">New Post</button>

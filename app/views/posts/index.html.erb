@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Journal App</title>
+</head>
+<body>
+  <h1>Journal App</h1>
+  <div id="sidebar" style="float: left;"></div>
+  <div id="content" style="float: left;"></div>
+
+  <script type="text/javascript">
+    var posts = <%= Post.all.to_json.html_safe %>;
+
+    console.log("posts: ", posts);
+
+    window.JA.initialize(
+      $('#sidebar'),
+      $('#content'),
+      posts
+    );
+  </script>
+</body>
+</html>
